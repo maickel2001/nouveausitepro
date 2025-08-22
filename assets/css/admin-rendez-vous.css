@@ -1,8 +1,8 @@
-/* ===== ADMIN UTILISATEURS PAGE SPECIFIC STYLES ===== */
+/* ===== ADMIN RENDEZ-VOUS PAGE SPECIFIC STYLES ===== */
 /* Inspiré du design de l'accueil pour une cohérence visuelle */
 
 /* Section d'en-tête */
-.section-utilisateurs-header {
+.section-rendez-vous-header {
     background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     padding: 4rem 0;
     color: white;
@@ -10,7 +10,7 @@
     overflow: hidden;
 }
 
-.section-utilisateurs-header::before {
+.section-rendez-vous-header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -21,41 +21,41 @@
     opacity: 0.3;
 }
 
-.utilisateurs-header-container {
+.rendez-vous-header-container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
 }
 
-.utilisateurs-header-content {
+.rendez-vous-header-content {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.utilisateurs-header-content h1 {
+.rendez-vous-header-content h1 {
     color: white;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
 
-.utilisateurs-header-content p {
+.rendez-vous-header-content p {
     color: #cbd5e1;
     font-size: 1.25rem;
     line-height: 1.7;
     margin-bottom: 2rem;
 }
 
-.utilisateurs-stats {
+.rendez-vous-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.utilisateur-stat-card {
+.rendez-vous-stat-card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 2rem;
@@ -65,31 +65,31 @@
     transition: all 0.3s ease;
 }
 
-.utilisateur-stat-card:hover {
+.rendez-vous-stat-card:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateY(-10px);
 }
 
-.utilisateur-stat-number {
+.rendez-vous-stat-number {
     font-size: 3rem;
     font-weight: 700;
     color: white;
     margin-bottom: 0.5rem;
 }
 
-.utilisateur-stat-label {
+.rendez-vous-stat-label {
     color: #cbd5e1;
     font-size: 1rem;
     font-weight: 500;
 }
 
 /* Section du contenu principal */
-.section-utilisateurs-content {
+.section-rendez-vous-content {
     padding: 4rem 0;
     background: #fff;
 }
 
-.utilisateurs-content-container {
+.rendez-vous-content-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -97,7 +97,7 @@
     gap: 3rem;
 }
 
-.utilisateurs-main {
+.rendez-vous-main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -216,15 +216,15 @@
     color: #2563eb;
 }
 
-/* Section de la liste des utilisateurs */
-.utilisateurs-list-section {
+/* Section de la liste des rendez-vous */
+.rendez-vous-list-section {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: 20px;
     padding: 2rem;
     border: 1px solid #e2e8f0;
 }
 
-.utilisateurs-list-section h2 {
+.rendez-vous-list-section h2 {
     color: #1e293b;
     margin-bottom: 2rem;
     font-size: 1.75rem;
@@ -233,17 +233,17 @@
     gap: 0.75rem;
 }
 
-.utilisateurs-list-section h2 i {
+.rendez-vous-list-section h2 i {
     color: #2563eb;
 }
 
-.utilisateurs-grid {
+.rendez-vous-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 2rem;
 }
 
-.utilisateur-card {
+.rendez-vous-card {
     background: white;
     border-radius: 20px;
     overflow: hidden;
@@ -252,56 +252,47 @@
     transition: all 0.3s ease;
 }
 
-.utilisateur-card:hover {
+.rendez-vous-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.utilisateur-header {
+.rendez-vous-header {
     background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     color: white;
-    padding: 2rem;
+    padding: 1.5rem;
     position: relative;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
 }
 
-.utilisateur-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-}
-
-.utilisateur-info h3 {
-    color: white;
+.rendez-vous-header::before {
+    content: '📅';
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
     font-size: 1.5rem;
+    opacity: 0.3;
+}
+
+.rendez-vous-title {
+    font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
-.utilisateur-email {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
+.rendez-vous-client {
+    font-size: 0.875rem;
+    opacity: 0.9;
 }
 
-.utilisateur-content {
+.rendez-vous-content {
     padding: 2rem;
 }
 
-.utilisateur-details {
+.rendez-vous-details {
     margin-bottom: 1.5rem;
 }
 
-.utilisateur-detail-item {
+.rendez-vous-detail-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -309,21 +300,21 @@
     border-bottom: 1px solid #f1f5f9;
 }
 
-.utilisateur-detail-item:last-child {
+.rendez-vous-detail-item:last-child {
     border-bottom: none;
 }
 
-.utilisateur-detail-label {
+.rendez-vous-detail-label {
     color: #94a3b8;
     font-size: 0.875rem;
 }
 
-.utilisateur-detail-value {
+.rendez-vous-detail-value {
     color: #1e293b;
     font-weight: 500;
 }
 
-.utilisateur-status {
+.rendez-vous-status {
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -334,27 +325,32 @@
     margin-bottom: 1rem;
 }
 
-.utilisateur-status.active {
+.rendez-vous-status.confirmed {
     background: rgba(16, 185, 129, 0.1);
     color: #059669;
 }
 
-.utilisateur-status.inactive {
-    background: rgba(239, 68, 68, 0.1);
-    color: #dc2626;
-}
-
-.utilisateur-status.pending {
+.rendez-vous-status.pending {
     background: rgba(245, 158, 11, 0.1);
     color: #d97706;
 }
 
-.utilisateur-status.suspended {
+.rendez-vous-status.cancelled {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+}
+
+.rendez-vous-status.completed {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+}
+
+.rendez-vous-status.no-show {
     background: rgba(107, 114, 128, 0.1);
     color: #4b5563;
 }
 
-.utilisateur-role {
+.rendez-vous-type {
     display: inline-block;
     background: rgba(139, 92, 246, 0.1);
     color: #7c3aed;
@@ -365,13 +361,19 @@
     margin-bottom: 1rem;
 }
 
-.utilisateur-actions {
+.rendez-vous-description {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.rendez-vous-actions {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
-.utilisateur-action-btn {
+.rendez-vous-action-btn {
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     font-size: 0.875rem;
@@ -385,78 +387,78 @@
     gap: 0.5rem;
 }
 
-.utilisateur-action-btn.edit {
+.rendez-vous-action-btn.edit {
     background: #2563eb;
     color: white;
 }
 
-.utilisateur-action-btn.edit:hover {
+.rendez-vous-action-btn.edit:hover {
     background: #1d4ed8;
 }
 
-.utilisateur-action-btn.delete {
+.rendez-vous-action-btn.delete {
     background: #ef4444;
     color: white;
 }
 
-.utilisateur-action-btn.delete:hover {
+.rendez-vous-action-btn.delete:hover {
     background: #dc2626;
 }
 
-.utilisateur-action-btn.view {
+.rendez-vous-action-btn.view {
     background: #10b981;
     color: white;
 }
 
-.utilisateur-action-btn.view:hover {
+.rendez-vous-action-btn.view:hover {
     background: #059669;
 }
 
-.utilisateur-action-btn.activate {
+.rendez-vous-action-btn.confirm {
     background: #10b981;
     color: white;
 }
 
-.utilisateur-action-btn.activate:hover {
+.rendez-vous-action-btn.confirm:hover {
     background: #059669;
 }
 
-.utilisateur-action-btn.deactivate {
+.rendez-vous-action-btn.cancel {
     background: #f59e0b;
     color: white;
 }
 
-.utilisateur-action-btn.deactivate:hover {
+.rendez-vous-action-btn.cancel:hover {
     background: #d97706;
 }
 
-.utilisateur-action-btn.suspend {
-    background: #6b7280;
-    color: white;
-}
-
-.utilisateur-action-btn.suspend:hover {
-    background: #4b5563;
-}
-
-.utilisateur-action-btn.reset-password {
+.rendez-vous-action-btn.complete {
     background: #8b5cf6;
     color: white;
 }
 
-.utilisateur-action-btn.reset-password:hover {
+.rendez-vous-action-btn.complete:hover {
     background: #7c3aed;
 }
 
-/* Section de création d'utilisateur */
-.new-utilisateur-section {
+.rendez-vous-action-btn.reschedule {
+    background: #6b7280;
+    color: white;
+}
+
+.rendez-vous-action-btn.reschedule:hover {
+    background: #4b5563;
+}
+
+/* Section de création de rendez-vous */
+.new-rendez-vous-section {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: 20px;
     padding: 2rem;
     border: 1px solid #e2e8f0;
 }
 
-.new-utilisateur-section h2 {
+.new-rendez-vous-section h2 {
     color: #1e293b;
     margin-bottom: 2rem;
     font-size: 1.75rem;
@@ -465,11 +467,11 @@
     gap: 0.75rem;
 }
 
-.new-utilisateur-section h2 i {
+.new-rendez-vous-section h2 i {
     color: #2563eb;
 }
 
-.new-utilisateur-form {
+.new-rendez-vous-form {
     background: white;
     border-radius: 16px;
     padding: 2rem;
@@ -522,46 +524,51 @@
     grid-column: 1 / -1;
 }
 
-.password-strength {
-    margin-top: 0.5rem;
+.time-slots-section {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.password-strength-bar {
-    height: 4px;
-    border-radius: 2px;
-    background: #e5e7eb;
-    overflow: hidden;
-    margin-bottom: 0.5rem;
+.time-slots-section h3 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
 }
 
-.password-strength-fill {
-    height: 100%;
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+}
+
+.time-slot {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
-.password-strength-fill.weak {
-    background: #ef4444;
-    width: 25%;
+.time-slot:hover {
+    border-color: #2563eb;
+    background: rgba(37, 99, 235, 0.05);
 }
 
-.password-strength-fill.fair {
-    background: #f59e0b;
-    width: 50%;
+.time-slot.selected {
+    border-color: #2563eb;
+    background: #2563eb;
+    color: white;
 }
 
-.password-strength-fill.good {
-    background: #10b981;
-    width: 75%;
-}
-
-.password-strength-fill.strong {
-    background: #059669;
-    width: 100%;
-}
-
-.password-strength-text {
-    font-size: 0.875rem;
-    color: #64748b;
+.time-slot.unavailable {
+    background: #f1f5f9;
+    color: #94a3b8;
+    cursor: not-allowed;
 }
 
 .form-actions {
@@ -603,15 +610,15 @@
     color: #2563eb;
 }
 
-/* Section des statistiques des utilisateurs */
-.utilisateurs-stats-section {
+/* Section du calendrier */
+.calendar-section {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: 20px;
     padding: 2rem;
     border: 1px solid #e2e8f0;
 }
 
-.utilisateurs-stats-section h2 {
+.calendar-section h2 {
     color: #1e293b;
     margin-bottom: 2rem;
     font-size: 1.75rem;
@@ -620,17 +627,134 @@
     gap: 0.75rem;
 }
 
-.utilisateurs-stats-section h2 i {
+.calendar-section h2 i {
     color: #2563eb;
 }
 
-.utilisateurs-stats-grid {
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.calendar-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.calendar-nav-btn {
+    background: white;
+    border: 2px solid #e2e8f0;
+    color: #64748b;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calendar-nav-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.calendar-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.calendar-day-header {
+    background: #f8fafc;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.calendar-day {
+    background: white;
+    padding: 1rem;
+    min-height: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.calendar-day:hover {
+    background: #f8fafc;
+}
+
+.calendar-day.today {
+    background: rgba(37, 99, 235, 0.1);
+    border: 2px solid #2563eb;
+}
+
+.calendar-day.has-appointments {
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.calendar-day-number {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.calendar-appointment {
+    background: #2563eb;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Section des statistiques des rendez-vous */
+.rendez-vous-stats-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid #e2e8f0;
+}
+
+.rendez-vous-stats-section h2 {
+    color: #1e293b;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.rendez-vous-stats-section h2 i {
+    color: #2563eb;
+}
+
+.rendez-vous-stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1.5rem;
 }
 
-.utilisateur-stat-item {
+.rendez-vous-stat-item {
     background: white;
     border-radius: 16px;
     padding: 1.5rem;
@@ -640,12 +764,12 @@
     transition: all 0.3s ease;
 }
 
-.utilisateur-stat-item:hover {
+.rendez-vous-stat-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-.utilisateur-stat-icon {
+.rendez-vous-stat-icon {
     width: 50px;
     height: 50px;
     background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
@@ -658,111 +782,21 @@
     font-size: 1.25rem;
 }
 
-.utilisateur-stat-number {
+.rendez-vous-stat-number {
     font-size: 2rem;
     font-weight: 700;
     color: #1e293b;
     margin-bottom: 0.5rem;
 }
 
-.utilisateur-stat-label {
+.rendez-vous-stat-label {
     color: #64748b;
     font-size: 0.875rem;
     font-weight: 500;
-}
-
-/* Section des utilisateurs récents */
-.recent-utilisateurs-section {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    border-radius: 20px;
-    padding: 2rem;
-    border: 1px solid #e2e8f0;
-}
-
-.recent-utilisateurs-section h2 {
-    color: #1e293b;
-    margin-bottom: 2rem;
-    font-size: 1.75rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.recent-utilisateurs-section h2 i {
-    color: #2563eb;
-}
-
-.recent-utilisateur-item {
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #e2e8f0;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.recent-utilisateur-item:last-child {
-    margin-bottom: 0;
-}
-
-.recent-utilisateur-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.recent-utilisateur-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 1.25rem;
-}
-
-.recent-utilisateur-info {
-    flex: 1;
-}
-
-.recent-utilisateur-name {
-    color: #1e293b;
-    font-weight: 600;
-    font-size: 1.125rem;
-    margin-bottom: 0.25rem;
-}
-
-.recent-utilisateur-email {
-    color: #64748b;
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
-}
-
-.recent-utilisateur-meta {
-    display: flex;
-    gap: 1rem;
-    font-size: 0.75rem;
-}
-
-.recent-utilisateur-role {
-    background: rgba(139, 92, 246, 0.1);
-    color: #7c3aed;
-    padding: 0.25rem 0.5rem;
-    border-radius: 8px;
-    font-weight: 500;
-}
-
-.recent-utilisateur-date {
-    color: #94a3b8;
 }
 
 /* Sidebar */
-.utilisateurs-sidebar {
+.rendez-vous-sidebar {
     position: sticky;
     top: 2rem;
     height: fit-content;
@@ -857,23 +891,23 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .utilisateurs-content-container {
+    .rendez-vous-content-container {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     
-    .utilisateurs-sidebar {
+    .rendez-vous-sidebar {
         position: static;
         order: -1;
     }
 }
 
 @media (max-width: 768px) {
-    .utilisateurs-header-content h1 {
+    .rendez-vous-header-content h1 {
         font-size: 2.5rem;
     }
     
-    .utilisateurs-stats {
+    .rendez-vous-stats {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -890,18 +924,12 @@
         align-items: stretch;
     }
     
-    .utilisateurs-grid {
+    .rendez-vous-grid {
         grid-template-columns: 1fr;
     }
     
-    .utilisateur-actions {
+    .rendez-vous-actions {
         flex-direction: column;
-    }
-    
-    .utilisateur-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
     }
     
     .form-row {
@@ -913,7 +941,21 @@
         align-items: stretch;
     }
     
-    .utilisateurs-stats-grid {
+    .time-slots-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    
+    .calendar-grid {
+        grid-template-columns: repeat(7, 1fr);
+        font-size: 0.875rem;
+    }
+    
+    .calendar-day {
+        padding: 0.5rem;
+        min-height: 80px;
+    }
+    
+    .rendez-vous-stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -932,47 +974,56 @@
         padding: 0 1rem;
     }
     
-    .utilisateurs-stats {
+    .rendez-vous-stats {
         grid-template-columns: 1fr;
     }
     
-    .utilisateurs-stats-grid {
+    .rendez-vous-stats-grid {
         grid-template-columns: 1fr;
     }
     
-    .utilisateur-stat-card,
+    .rendez-vous-stat-card,
     .filters-section,
-    .utilisateurs-list-section,
-    .new-utilisateur-section,
-    .utilisateurs-stats-section,
-    .recent-utilisateurs-section,
+    .rendez-vous-list-section,
+    .new-rendez-vous-section,
+    .calendar-section,
+    .rendez-vous-stats-section,
     .sidebar-section {
         padding: 1.5rem;
     }
     
-    .utilisateur-card {
+    .rendez-vous-card {
         margin-bottom: 1.5rem;
     }
     
-    .utilisateur-header {
+    .rendez-vous-header {
         padding: 1.5rem;
     }
     
-    .utilisateur-content {
+    .rendez-vous-content {
         padding: 1.5rem;
     }
     
-    .new-utilisateur-form {
+    .new-rendez-vous-form {
         padding: 1.5rem;
     }
     
-    .recent-utilisateur-item {
+    .time-slots-section {
         padding: 1rem;
-        flex-direction: column;
-        text-align: center;
     }
     
-    .recent-utilisateur-meta {
-        justify-content: center;
+    .time-slots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .calendar-day {
+        padding: 0.25rem;
+        min-height: 60px;
+        font-size: 0.75rem;
+    }
+    
+    .calendar-day-header {
+        padding: 0.5rem;
+        font-size: 0.75rem;
     }
 }
