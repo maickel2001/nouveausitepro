@@ -4,12 +4,8 @@
  * Mise à jour avec les nouvelles informations de connexion
  */
 
-// Configuration de la base de données
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'u634930929_Ini');
-define('DB_USER', 'u634930929_Ini');
-define('DB_PASS', 'Ino1234@');
-define('DB_CHARSET', 'utf8mb4');
+// Inclusion de la configuration pour accéder aux constantes de base de données
+require_once __DIR__ . '/config.php';
 
 /**
  * Classe Database pour la gestion des connexions PDO
