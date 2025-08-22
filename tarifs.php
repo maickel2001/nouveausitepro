@@ -9,6 +9,12 @@ $page_title = 'Nos tarifs - Maickel Okereke';
 $page_description = 'Découvrez nos tarifs transparents et nos forfaits adaptés à tous les budgets.';
 $page_keywords = 'tarifs, prix, forfaits, comptabilité, développement web, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
+// Inclusion du header
+include 'includes/header.php';
+
 // Données des forfaits (en production, viendraient de la base de données)
 $forfaits = [
     [

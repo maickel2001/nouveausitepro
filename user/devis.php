@@ -9,6 +9,9 @@ $page_title = 'Mes devis - Espace utilisateur - Maickel Okereke';
 $page_description = 'Gérez et suivez tous vos devis dans votre espace utilisateur personnel.';
 $page_keywords = 'devis, espace utilisateur, suivi, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once '../includes/functions.php';
+
 // Vérification de la connexion (simulation)
 session_start();
 $is_logged_in = isset($_SESSION['user_id']) && !empty($_SESSION['user_id']);

@@ -9,6 +9,12 @@ $page_title = 'Nos Services - Maickel Okereke';
 $page_description = 'Découvrez nos services de comptabilité, développement web et conseil fiscal. Solutions sur mesure pour TPE/PME et startups.';
 $page_keywords = 'services comptabilité, développement web, conseil fiscal, TPE PME, startups, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
+// Inclusion du header
+include 'includes/header.php';
+
 // Données des services (en production, viendront de la base de données)
 $services = [
     [

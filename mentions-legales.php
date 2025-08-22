@@ -9,6 +9,9 @@ $page_title = 'Mentions légales - Maickel Okereke';
 $page_description = 'Mentions légales et informations légales du site professionnel de Maickel Okereke, expert en comptabilité et développement web.';
 $page_keywords = 'mentions légales, informations légales, Maickel Okereke, comptabilité, développement web';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
 // Inclusion de l'en-tête
 include 'includes/header.php';
 ?>

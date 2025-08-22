@@ -9,6 +9,9 @@ $page_title = 'Mes ressources - Espace utilisateur - Maickel Okereke';
 $page_description = 'Accédez et gérez toutes vos ressources téléchargées dans votre espace utilisateur personnel.';
 $page_keywords = 'ressources, téléchargements, espace utilisateur, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once '../includes/functions.php';
+
 // Vérification de la connexion (simulation)
 session_start();
 $is_logged_in = isset($_SESSION['user_id']) && !empty($_SESSION['user_id']);

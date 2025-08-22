@@ -9,6 +9,9 @@ $page_title = 'Demande de Devis - Maickel Okereke';
 $page_description = 'Demandez un devis personnalisé pour vos besoins en comptabilité et développement web. Formulaire simple et rapide.';
 $page_keywords = 'devis, devis comptabilité, devis développement web, tarifs, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
 // Récupération du service présélectionné depuis l'URL
 $service_preselect = $_GET['service'] ?? '';
 

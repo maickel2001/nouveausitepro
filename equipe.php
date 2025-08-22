@@ -9,6 +9,9 @@ $page_title = 'Notre équipe - Maickel Okereke';
 $page_description = 'Découvrez notre équipe d\'experts en comptabilité et développement web.';
 $page_keywords = 'équipe, experts, comptabilité, développement web, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
 // Données de l'équipe (en production, viendraient de la base de données)
 $equipe = [
     [

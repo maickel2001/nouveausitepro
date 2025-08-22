@@ -9,6 +9,9 @@ $page_title = 'À propos - Maickel Okereke';
 $page_description = 'Découvrez l\'histoire et l\'expertise de Maickel Okereke, expert-comptable et développeur web passionné par l\'accompagnement des TPE/PME.';
 $page_keywords = 'Maickel Okereke, expert-comptable, développeur web, TPE PME, histoire, parcours, expertise';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
 // En-tête de page personnalisé
 $page_header = '
 <div class="page-header-content">

@@ -9,6 +9,12 @@ $page_title = 'Article - Maickel Okereke';
 $page_description = 'Découvrez nos articles sur la comptabilité, le développement web et la gestion d\'entreprise.';
 $page_keywords = 'article, blog, comptabilité, développement web, gestion, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
+// Inclusion du header
+include 'includes/header.php';
+
 // Récupération de l'ID de l'article
 $article_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 

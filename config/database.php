@@ -1,26 +1,18 @@
 <?php
 /**
  * Configuration de la base de données
- * Site professionnel de Maickel Okereke
+ * Mise à jour avec les nouvelles informations de connexion
  */
 
-// Informations de connexion à la base de données
+// Configuration de la base de données
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'maickel_site');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_NAME', 'u634930929_Ini');
+define('DB_USER', 'u634930929_Ini');
+define('DB_PASS', 'Ino1234@');
 define('DB_CHARSET', 'utf8mb4');
 
-// Options PDO
-define('DB_OPTIONS', [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES => false,
-    PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci"
-]);
-
 /**
- * Classe Database pour la gestion de la connexion
+ * Classe Database pour la gestion des connexions PDO
  */
 class Database {
     private static $instance = null;
@@ -29,16 +21,18 @@ class Database {
     private function __construct() {
         try {
             $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
-            $this->connection = new PDO($dsn, DB_USER, DB_PASS, DB_OPTIONS);
+            $this->connection = new PDO($dsn, DB_USER, DB_PASS, [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                PDO::ATTR_EMULATE_PREPARES => false,
+                PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES " . DB_CHARSET
+            ]);
         } catch (PDOException $e) {
             error_log("Erreur de connexion à la base de données: " . $e->getMessage());
             throw new Exception("Impossible de se connecter à la base de données");
         }
     }
     
-    /**
-     * Obtenir l'instance unique de la base de données
-     */
     public static function getInstance() {
         if (self::$instance === null) {
             self::$instance = new self();
@@ -46,107 +40,69 @@ class Database {
         return self::$instance;
     }
     
-    /**
-     * Obtenir la connexion PDO
-     */
     public function getConnection() {
         return $this->connection;
     }
     
-    /**
-     * Exécuter une requête préparée
-     */
     public function query($sql, $params = []) {
         try {
             $stmt = $this->connection->prepare($sql);
             $stmt->execute($params);
             return $stmt;
         } catch (PDOException $e) {
-            error_log("Erreur de requête: " . $e->getMessage());
+            error_log("Erreur de requête SQL: " . $e->getMessage());
             throw new Exception("Erreur lors de l'exécution de la requête");
         }
     }
     
-    /**
-     * Récupérer une seule ligne
-     */
-    public function fetchOne($sql, $params = []) {
+    public function fetch($sql, $params = []) {
         $stmt = $this->query($sql, $params);
         return $stmt->fetch();
     }
     
-    /**
-     * Récupérer toutes les lignes
-     */
     public function fetchAll($sql, $params = []) {
         $stmt = $this->query($sql, $params);
         return $stmt->fetchAll();
     }
     
-    /**
-     * Insérer une ligne et retourner l'ID
-     */
-    public function insert($sql, $params = []) {
-        $stmt = $this->query($sql, $params);
+    public function insert($table, $data) {
+        $columns = implode(', ', array_keys($data));
+        $placeholders = ':' . implode(', :', array_keys($data));
+        
+        $sql = "INSERT INTO {$table} ({$columns}) VALUES ({$placeholders})";
+        $this->query($sql, $data);
+        
         return $this->connection->lastInsertId();
     }
     
-    /**
-     * Mettre à jour des données
-     */
-    public function update($sql, $params = []) {
-        $stmt = $this->query($sql, $params);
-        return $stmt->rowCount();
+    public function update($table, $data, $where, $whereParams = []) {
+        $setParts = [];
+        foreach (array_keys($data) as $column) {
+            $setParts[] = "{$column} = :{$column}";
+        }
+        $setClause = implode(', ', $setParts);
+        
+        $sql = "UPDATE {$table} SET {$setClause} WHERE {$where}";
+        $params = array_merge($data, $whereParams);
+        
+        return $this->query($sql, $params)->rowCount();
     }
     
-    /**
-     * Supprimer des données
-     */
-    public function delete($sql, $params = []) {
-        $stmt = $this->query($sql, $params);
-        return $stmt->rowCount();
+    public function delete($table, $where, $params = []) {
+        $sql = "DELETE FROM {$table} WHERE {$where}";
+        return $this->query($sql, $params)->rowCount();
     }
     
-    /**
-     * Commencer une transaction
-     */
     public function beginTransaction() {
         return $this->connection->beginTransaction();
     }
     
-    /**
-     * Valider une transaction
-     */
     public function commit() {
         return $this->connection->commit();
     }
     
-    /**
-     * Annuler une transaction
-     */
     public function rollback() {
         return $this->connection->rollback();
-    }
-    
-    /**
-     * Vérifier si une transaction est active
-     */
-    public function inTransaction() {
-        return $this->connection->inTransaction();
-    }
-    
-    /**
-     * Échapper une chaîne pour éviter l'injection SQL
-     */
-    public function escape($string) {
-        return $this->connection->quote($string);
-    }
-    
-    /**
-     * Fermer la connexion
-     */
-    public function close() {
-        $this->connection = null;
     }
 }
 
@@ -170,7 +126,7 @@ function dbQuery($sql, $params = []) {
  */
 function dbFetchOne($sql, $params = []) {
     $db = getDB();
-    return $db->fetchOne($sql, $params);
+    return $db->fetch($sql, $params);
 }
 
 /**
@@ -184,24 +140,24 @@ function dbFetchAll($sql, $params = []) {
 /**
  * Fonction utilitaire pour insérer
  */
-function dbInsert($sql, $params = []) {
+function dbInsert($table, $data) {
     $db = getDB();
-    return $db->insert($sql, $params);
+    return $db->insert($table, $data);
 }
 
 /**
  * Fonction utilitaire pour mettre à jour
  */
-function dbUpdate($sql, $params = []) {
+function dbUpdate($table, $data, $where, $whereParams = []) {
     $db = getDB();
-    return $db->update($sql, $params);
+    return $db->update($table, $data, $where, $whereParams);
 }
 
 /**
  * Fonction utilitaire pour supprimer
  */
-function dbDelete($sql, $params = []) {
+function dbDelete($table, $where, $params = []) {
     $db = getDB();
-    return $db->delete($sql, $params);
+    return $db->delete($table, $where, $params);
 }
 ?>

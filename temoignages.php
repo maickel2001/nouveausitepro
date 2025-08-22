@@ -9,6 +9,12 @@ $page_title = 'Témoignages clients - Maickel Okereke';
 $page_description = 'Découvrez les retours de nos clients satisfaits en comptabilité et développement web.';
 $page_keywords = 'témoignages, avis clients, satisfaction, comptabilité, développement web, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
+// Inclusion du header
+include 'includes/header.php';
+
 // Données des témoignages (en production, viendraient de la base de données)
 $temoignages = [
     [

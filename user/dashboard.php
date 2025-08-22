@@ -9,6 +9,9 @@ $page_title = 'Tableau de bord - Espace utilisateur - Maickel Okereke';
 $page_description = 'Gérez votre compte et accédez à vos services dans votre espace utilisateur personnel.';
 $page_keywords = 'tableau de bord, espace utilisateur, compte, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once '../includes/functions.php';
+
 // Vérification de la connexion (simulation)
 session_start();
 $is_logged_in = isset($_SESSION['user_id']) && !empty($_SESSION['user_id']);

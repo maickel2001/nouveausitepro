@@ -9,6 +9,9 @@ $page_title = 'Prendre rendez-vous - Maickel Okereke';
 $page_description = 'Planifiez une consultation gratuite pour discuter de vos besoins en comptabilité et développement web.';
 $page_keywords = 'rendez-vous, consultation, comptabilité, développement web, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
 // Traitement du formulaire de rendez-vous
 $form_sent = false;
 $form_errors = [];
@@ -100,7 +103,7 @@ $page_header = '
 </div>
 ';
 
-// Inclusion de l\'en-tête
+// Inclusion du header
 include 'includes/header.php';
 ?>
 

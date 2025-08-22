@@ -9,6 +9,9 @@ $page_title = 'Mon profil - Espace utilisateur - Maickel Okereke';
 $page_description = 'Gérez vos informations personnelles et vos paramètres de compte dans votre espace utilisateur.';
 $page_keywords = 'profil, compte, paramètres, espace utilisateur, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once '../includes/functions.php';
+
 // Vérification de la connexion (simulation)
 session_start();
 $is_logged_in = isset($_SESSION['user_id']) && !empty($_SESSION['user_id']);

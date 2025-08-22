@@ -7,7 +7,13 @@
 // Configuration de la page
 $page_title = 'Études de cas - Maickel Okereke';
 $page_description = 'Découvrez nos réalisations et études de cas en comptabilité et développement web.';
-$keywords = 'études de cas, réalisations, projets, comptabilité, développement web, Maickel Okereke';
+$page_keywords = 'études de cas, réalisations, projets, comptabilité, développement web, Maickel Okereke';
+
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
+// Inclusion du header
+include 'includes/header.php';
 
 // Données des études de cas (en production, viendraient de la base de données)
 $etudes_cas = [

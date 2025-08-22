@@ -9,6 +9,9 @@ $page_title = 'Connexion - Maickel Okereke';
 $page_description = 'Connectez-vous à votre espace personnel pour accéder à vos ressources et suivre vos demandes.';
 $page_keywords = 'connexion, login, espace personnel, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
 // Redirection après connexion
 $redirect = $_GET['redirect'] ?? '';
 

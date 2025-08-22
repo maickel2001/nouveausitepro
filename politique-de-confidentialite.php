@@ -9,6 +9,9 @@ $page_title = 'Politique de confidentialité - Maickel Okereke';
 $page_description = 'Politique de confidentialité et protection des données personnelles du site professionnel de Maickel Okereke.';
 $page_keywords = 'politique de confidentialité, protection des données, RGPD, cookies, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
 // Inclusion de l'en-tête
 include 'includes/header.php';
 ?>

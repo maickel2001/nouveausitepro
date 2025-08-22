@@ -9,6 +9,9 @@ $page_title = 'Contact - Maickel Okereke';
 $page_description = 'Contactez Maickel Okereke pour vos besoins en comptabilité et développement web. Consultation gratuite et devis personnalisé.';
 $page_keywords = 'contact, Maickel Okereke, expert-comptable, développeur web, devis, consultation';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
 // Traitement du formulaire de contact
 $form_sent = false;
 $form_errors = [];

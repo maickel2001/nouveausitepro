@@ -9,6 +9,12 @@ $page_title = 'Ressources - Maickel Okereke';
 $page_description = 'Téléchargez gratuitement nos ressources : guides, templates, checklists pour la comptabilité et le développement web.';
 $page_keywords = 'ressources, téléchargements, guides, templates, comptabilité, développement web, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
+// Inclusion du header
+include 'includes/header.php';
+
 // Données des ressources (en production, viendront de la base de données)
 $ressources = [
     [

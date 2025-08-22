@@ -9,6 +9,12 @@ $page_title = 'Blog - Maickel Okereke';
 $page_description = 'Découvrez nos articles sur la comptabilité, le développement web et la gestion d\'entreprise.';
 $page_keywords = 'blog, articles, comptabilité, développement web, gestion, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
+// Inclusion du header
+include 'includes/header.php';
+
 // Données des articles (en production, viendraient de la base de données)
 $articles = [
     [

@@ -9,6 +9,12 @@ $page_title = 'FAQ - Questions Fréquentes - Maickel Okereke';
 $page_description = 'Trouvez rapidement les réponses à vos questions sur nos services de comptabilité et développement web.';
 $page_keywords = 'FAQ, questions fréquentes, comptabilité, développement web, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
+// Inclusion du header
+include 'includes/header.php';
+
 // Données de la FAQ (en production, viendront de la base de données)
 $faq_categories = [
     'general' => [

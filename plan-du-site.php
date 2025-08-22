@@ -9,6 +9,9 @@ $page_title = 'Plan du site - Maickel Okereke';
 $page_description = 'Plan du site et navigation complète du site professionnel de Maickel Okereke, expert en comptabilité et développement web.';
 $page_keywords = 'plan du site, navigation, sitemap, Maickel Okereke, comptabilité, développement web';
 
+// Inclusion des fichiers nécessaires
+require_once 'includes/functions.php';
+
 // Inclusion de l'en-tête
 include 'includes/header.php';
 ?>

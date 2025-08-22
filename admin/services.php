@@ -9,6 +9,9 @@ $page_title = 'Gestion des services - Administration - Maickel Okereke';
 $page_description = 'Gérez les services proposés par votre entreprise depuis l\'interface administrateur.';
 $page_keywords = 'admin, services, gestion, administration, Maickel Okereke';
 
+// Inclusion des fichiers nécessaires
+require_once '../includes/functions.php';
+
 // Vérification de la connexion et des droits admin (simulation)
 session_start();
 $is_logged_in = isset($_SESSION['user_id']) && !empty($_SESSION['user_id']);
