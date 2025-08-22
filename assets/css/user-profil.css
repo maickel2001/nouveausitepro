@@ -1,8 +1,8 @@
-/* ===== USER PROFIL PAGE SPECIFIC STYLES ===== */
+/* ===== USER DEVIS PAGE SPECIFIC STYLES ===== */
 /* Inspiré du design de l'accueil pour une cohérence visuelle */
 
 /* Section d'en-tête */
-.section-profil-header {
+.section-devis-header {
     background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     padding: 4rem 0;
     color: white;
@@ -10,7 +10,7 @@
     overflow: hidden;
 }
 
-.section-profil-header::before {
+.section-devis-header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -21,41 +21,41 @@
     opacity: 0.3;
 }
 
-.profil-header-container {
+.devis-header-container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
 }
 
-.profil-header-content {
+.devis-header-content {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.profil-header-content h1 {
+.devis-header-content h1 {
     color: white;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
 
-.profil-header-content p {
+.devis-header-content p {
     color: #cbd5e1;
     font-size: 1.25rem;
     line-height: 1.7;
     margin-bottom: 2rem;
 }
 
-.profil-overview {
+.devis-overview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.profil-overview-card {
+.devis-overview-card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 2rem;
@@ -65,31 +65,31 @@
     transition: all 0.3s ease;
 }
 
-.profil-overview-card:hover {
+.devis-overview-card:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateY(-10px);
 }
 
-.profil-overview-number {
+.devis-overview-number {
     font-size: 3rem;
     font-weight: 700;
     color: white;
     margin-bottom: 0.5rem;
 }
 
-.profil-overview-label {
+.devis-overview-label {
     color: #cbd5e1;
     font-size: 1rem;
     font-weight: 500;
 }
 
 /* Section du contenu principal */
-.section-profil-content {
+.section-devis-content {
     padding: 4rem 0;
     background: #fff;
 }
 
-.profil-content-container {
+.devis-content-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -97,21 +97,21 @@
     gap: 3rem;
 }
 
-.profil-main {
+.devis-main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-/* Section des informations personnelles */
-.personal-info-section {
+/* Section de création de devis */
+.new-devis-section {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: 20px;
     padding: 2rem;
     border: 1px solid #e2e8f0;
 }
 
-.personal-info-section h2 {
+.new-devis-section h2 {
     color: #1e293b;
     margin-bottom: 2rem;
     font-size: 1.75rem;
@@ -120,16 +120,90 @@
     gap: 0.75rem;
 }
 
-.personal-info-section h2 i {
+.new-devis-section h2 i {
     color: #2563eb;
 }
 
-.personal-info-form {
+.new-devis-form {
     background: white;
     border-radius: 16px;
     padding: 2rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border: 1px solid #e2e8f0;
+}
+
+.form-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form-steps::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e2e8f0;
+    z-index: 1;
+}
+
+.form-step {
+    position: relative;
+    z-index: 2;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #64748b;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.form-step.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.form-step.completed {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+.form-step-label {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.875rem;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.form-step.active .form-step-label {
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.form-step.completed .form-step-label {
+    color: #10b981;
+    font-weight: 500;
+}
+
+.form-step-content {
+    display: none;
+}
+
+.form-step-content.active {
+    display: block;
 }
 
 .form-row {
@@ -177,7 +251,7 @@
     grid-column: 1 / -1;
 }
 
-.avatar-upload-group {
+.file-upload-group {
     border: 2px dashed #e5e7eb;
     border-radius: 8px;
     padding: 2rem;
@@ -186,32 +260,63 @@
     cursor: pointer;
 }
 
-.avatar-upload-group:hover {
+.file-upload-group:hover {
     border-color: #2563eb;
     background: rgba(37, 99, 235, 0.05);
 }
 
-.avatar-upload-group i {
+.file-upload-group i {
     font-size: 2rem;
     color: #9ca3af;
     margin-bottom: 1rem;
 }
 
-.avatar-upload-text {
+.file-upload-text {
     color: #64748b;
     margin-bottom: 0.5rem;
 }
 
-.avatar-upload-hint {
+.file-upload-hint {
     color: #9ca3af;
     font-size: 0.875rem;
 }
 
-.form-actions {
+.form-navigation {
     display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 2rem;
+}
+
+.btn-prev {
+    background: white;
+    color: #64748b;
+    border: 2px solid #e5e7eb;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-prev:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.btn-next {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
 .btn-submit {
@@ -230,195 +335,208 @@
     box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
 }
 
-.btn-cancel {
+/* Section de la liste des devis */
+.devis-list-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid #e2e8f0;
+}
+
+.devis-list-section h2 {
+    color: #1e293b;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.devis-list-section h2 i {
+    color: #2563eb;
+}
+
+.devis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.devis-card {
     background: white;
-    color: #64748b;
-    border: 2px solid #e5e7eb;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
 }
 
-.btn-cancel:hover {
-    border-color: #2563eb;
-    color: #2563eb;
+.devis-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Section de sécurité */
-.security-section {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    border-radius: 20px;
-    padding: 2rem;
-    border: 1px solid #e2e8f0;
-}
-
-.security-section h2 {
-    color: #1e293b;
-    margin-bottom: 2rem;
-    font-size: 1.75rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.security-section h2 i {
-    color: #2563eb;
-}
-
-.security-form {
-    background: white;
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e2e8f0;
-}
-
-.password-group {
+.devis-header {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    padding: 1.5rem;
     position: relative;
 }
 
-.password-toggle {
+.devis-header::before {
+    content: '€';
     position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #9ca3af;
-    cursor: pointer;
-    font-size: 1.125rem;
-    transition: color 0.3s ease;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
 }
 
-.password-toggle:hover {
-    color: #2563eb;
+.devis-number {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-.password-strength {
-    margin-top: 0.5rem;
-    padding: 0.75rem;
-    border-radius: 8px;
+.devis-date {
     font-size: 0.875rem;
-    font-weight: 500;
+    opacity: 0.9;
 }
 
-.password-strength.weak {
-    background: rgba(239, 68, 68, 0.1);
-    color: #dc2626;
-    border: 1px solid rgba(239, 68, 68, 0.2);
-}
-
-.password-strength.medium {
-    background: rgba(245, 158, 11, 0.1);
-    color: #d97706;
-    border: 1px solid rgba(245, 158, 11, 0.2);
-}
-
-.password-strength.strong {
-    background: rgba(16, 185, 129, 0.1);
-    color: #059669;
-    border: 1px solid rgba(16, 185, 129, 0.2);
-}
-
-.password-strength.very-strong {
-    background: rgba(34, 197, 94, 0.1);
-    color: #16a34a;
-    border: 1px solid rgba(34, 197, 94, 0.2);
-}
-
-/* Section des préférences */
-.preferences-section {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    border-radius: 20px;
+.devis-content {
     padding: 2rem;
-    border: 1px solid #e2e8f0;
 }
 
-.preferences-section h2 {
-    color: #1e293b;
-    margin-bottom: 2rem;
-    font-size: 1.75rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+.devis-details {
+    margin-bottom: 1.5rem;
 }
 
-.preferences-section h2 i {
-    color: #2563eb;
-}
-
-.preferences-form {
-    background: white;
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e2e8f0;
-}
-
-.preference-item {
+.devis-detail-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid #f1f5f9;
 }
 
-.preference-item:last-child {
+.devis-detail-item:last-child {
     border-bottom: none;
 }
 
-.preference-info h3 {
-    color: #1e293b;
-    font-size: 1.125rem;
-    margin-bottom: 0.25rem;
-}
-
-.preference-info p {
+.devis-detail-label {
     color: #64748b;
     font-size: 0.875rem;
 }
 
-.preference-toggle {
-    position: relative;
-    width: 60px;
-    height: 30px;
-    background: #e5e7eb;
-    border-radius: 15px;
+.devis-detail-value {
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.devis-status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+}
+
+.devis-status.pending {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+}
+
+.devis-status.approved {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+}
+
+.devis-status.rejected {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+}
+
+.devis-status.in-progress {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+}
+
+.devis-status.completed {
+    background: rgba(139, 92, 246, 0.1);
+    color: #7c3aed;
+}
+
+.devis-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.devis-action-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.preference-toggle.active {
+.devis-action-btn.view {
     background: #2563eb;
+    color: white;
 }
 
-.preference-toggle::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 26px;
-    height: 26px;
+.devis-action-btn.view:hover {
+    background: #1d4ed8;
+}
+
+.devis-action-btn.download {
+    background: #10b981;
+    color: white;
+}
+
+.devis-action-btn.download:hover {
+    background: #059669;
+}
+
+.devis-action-btn.edit {
+    background: #8b5cf6;
+    color: white;
+}
+
+.devis-action-btn.edit:hover {
+    background: #7c3aed;
+}
+
+.devis-action-btn.cancel {
     background: white;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+    color: #64748b;
+    border: 2px solid #e5e7eb;
 }
 
-.preference-toggle.active::before {
-    transform: translateX(30px);
+.devis-action-btn.cancel:hover {
+    border-color: #ef4444;
+    color: #ef4444;
 }
 
-/* Section des statistiques du profil */
-.profil-stats-section {
+/* Section des statistiques des devis */
+.devis-stats-section {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: 20px;
     padding: 2rem;
     border: 1px solid #e2e8f0;
 }
 
-.profil-stats-section h2 {
+.devis-stats-section h2 {
     color: #1e293b;
     margin-bottom: 2rem;
     font-size: 1.75rem;
@@ -427,17 +545,17 @@
     gap: 0.75rem;
 }
 
-.profil-stats-section h2 i {
+.devis-stats-section h2 i {
     color: #2563eb;
 }
 
-.profil-stats-grid {
+.devis-stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1.5rem;
 }
 
-.profil-stat-item {
+.devis-stat-item {
     background: white;
     border-radius: 16px;
     padding: 1.5rem;
@@ -447,12 +565,12 @@
     transition: all 0.3s ease;
 }
 
-.profil-stat-item:hover {
+.devis-stat-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-.profil-stat-icon {
+.devis-stat-icon {
     width: 50px;
     height: 50px;
     background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
@@ -465,21 +583,21 @@
     font-size: 1.25rem;
 }
 
-.profil-stat-number {
+.devis-stat-number {
     font-size: 2rem;
     font-weight: 700;
     color: #1e293b;
     margin-bottom: 0.5rem;
 }
 
-.profil-stat-label {
+.devis-stat-label {
     color: #64748b;
     font-size: 0.875rem;
     font-weight: 500;
 }
 
 /* Sidebar */
-.profil-sidebar {
+.devis-sidebar {
     position: sticky;
     top: 2rem;
     height: fit-content;
@@ -574,23 +692,23 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .profil-content-container {
+    .devis-content-container {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     
-    .profil-sidebar {
+    .devis-sidebar {
         position: static;
         order: -1;
     }
 }
 
 @media (max-width: 768px) {
-    .profil-header-content h1 {
+    .devis-header-content h1 {
         font-size: 2.5rem;
     }
     
-    .profil-overview {
+    .devis-overview {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -598,18 +716,20 @@
         grid-template-columns: 1fr;
     }
     
-    .form-actions {
+    .form-navigation {
         flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .preference-item {
-        flex-direction: column;
-        align-items: flex-start;
         gap: 1rem;
     }
     
-    .profil-stats-grid {
+    .devis-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .devis-actions {
+        flex-direction: column;
+    }
+    
+    .devis-stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -628,30 +748,39 @@
         padding: 0 1rem;
     }
     
-    .profil-overview {
+    .devis-overview {
         grid-template-columns: 1fr;
     }
     
-    .profil-stats-grid {
+    .devis-stats-grid {
         grid-template-columns: 1fr;
     }
     
-    .profil-overview-card,
-    .personal-info-section,
-    .security-section,
-    .preferences-section,
-    .profil-stats-section,
+    .devis-overview-card,
+    .new-devis-section,
+    .devis-list-section,
+    .devis-stats-section,
     .sidebar-section {
         padding: 1.5rem;
     }
     
-    .personal-info-form,
-    .security-form,
-    .preferences-form {
+    .devis-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .devis-header {
         padding: 1.5rem;
     }
     
-    .avatar-upload-group {
+    .devis-content {
+        padding: 1.5rem;
+    }
+    
+    .new-devis-form {
+        padding: 1.5rem;
+    }
+    
+    .file-upload-group {
         padding: 1.5rem;
     }
 }

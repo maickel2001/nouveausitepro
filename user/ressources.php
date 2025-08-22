@@ -144,6 +144,10 @@ $stats = [
 // Inclusion de l'en-tête
 include '../includes/header.php';
 ?>
+<!-- CSS spécifique à la page -->
+<link rel="stylesheet" href="/assets/css/user-ressources.css">
+<?php
+?>
 
 <!-- Section des ressources -->
 <section class="section section-user-ressources">

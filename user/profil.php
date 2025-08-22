@@ -98,6 +98,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Inclusion de l'en-tête
 include '../includes/header.php';
 ?>
+<!-- CSS spécifique à la page -->
+<link rel="stylesheet" href="/assets/css/user-profil.css">
+<?php
+?>
 
 <!-- Section du profil -->
 <section class="section section-user-profile">

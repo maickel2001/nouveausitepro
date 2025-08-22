@@ -139,6 +139,10 @@ $stats = [
 // Inclusion de l'en-tête
 include '../includes/header.php';
 ?>
+<!-- CSS spécifique à la page -->
+<link rel="stylesheet" href="/assets/css/user-devis.css">
+<?php
+?>
 
 <!-- Section des devis -->
 <section class="section section-user-devis">
