@@ -317,7 +317,7 @@ include 'includes/header.php';
                     </div>
                 </div>
             </div>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </div>
         
         <?php endif; ?>
