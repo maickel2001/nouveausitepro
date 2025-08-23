@@ -1,0 +1,26 @@
+=== PROGRÈS DE REFAIRE LES PAGES ===
+Pages refaites avec le style de l'accueil :
+- services.php ✅
+- a-propos.php ✅
+
+Pages restantes à refaire :
+404.php
+article.php
+blog.php
+contact.php
+devis.php
+equipe.php
+etude-detail.php
+etudes-de-cas.php
+faq.php
+inscription.php
+login.php
+logout.php
+mentions-legales.php
+plan-du-site.php
+politique-de-confidentialite.php
+register.php
+rendez-vous.php
+ressources.php
+tarifs.php
+temoignages.php
